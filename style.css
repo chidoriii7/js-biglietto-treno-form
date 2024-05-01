@@ -1,0 +1,99 @@
+/* generale */
+body {
+    background-color: green;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* generazione biglietto */
+
+
+.title {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-biglietto , .risultato-biglietto {
+    background-color: white;
+    width: 1000px;
+    height: 250px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.input-list {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    
+    text-align: center;
+    border-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.button-col {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+button {
+    padding: 10px;
+    color: red;
+    border-radius: 5px;
+}
+
+/* biglietto generato */
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    padding-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.col20 {
+    width: calc(100% / 5);
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.widget-title {
+    font-weight: bolder;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.widget-value {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.nometicket {
+    background-color: blue;
+}

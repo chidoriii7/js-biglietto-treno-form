@@ -8,10 +8,89 @@
 </head>
 <body>
 
-    <input id="pathing" placeholder="Inserisci Km" type="number">
-    <input id="age" placeholder="Inserisci Età" type="number">
-    <button id="read-text">Genera biglietto</button>
-    <button id="reset-button">Resetta</button>
+    <!-- generazione biglietto -->
+<div id="generazione-biglietto">
+    <div class="title">
+        <h1>CALCOLA IL PREZZO TUO BIGLIETTO</h1>
+    </div>
+
+    <div class="container-biglietto">
+        <div class="input-col">
+            <div class="input-list">
+                
+                <input id="user" placeholder="Nome e Cognome" type="text">
+                <input id="pathing" placeholder="Inserisci Km" type="number">
+                <input id="age" placeholder="Inserisci Età" type="number">
+
+            </div>
+
+        </div>
+        <div class="button-col">
+
+            <button id="read-text">Genera</button>
+            <button id="reset-button">Resetta</button>
+
+        </div>
+    </div>
+</div>
+    
+    <!-- biglietto generato -->
+
+    <div id="ticket-result" class="hidden">
+        <div class="title">
+            <h1>IL TUO BIGLIETTO</h1>
+        </div>
+        <div class="risultato-biglietto ">
+            <h2>DETTAGLI PASSEGGERO</h2>
+            <hr>
+            <div class="row">
+                <div class="col20">
+                    <div class="widget nometicket">
+                        <h4 class="widget-title">NOME PASSEGGERO</h4>
+                        <ul id="username-output" class="widget-value">
+                            <li></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="col20">
+                    <div class="widget">
+                        <h4 class="widget-title">Sconto</h4>
+                        <ul id="discount-output" class="widget-value">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col20">
+                    <div class="widget">
+                        <h4 class="widget-title">Carrozza</h4>
+                        <ul id="carrozza-output" class="widget-value">
+                            <li></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="col20">
+                    <div class="widget">
+                        <h4 class="widget-title">Codice CP</h4>
+                        <ul id="cp-output" class="widget-value">
+                            <li>12345</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col20">
+                    <div class="widget">
+                        <h4 class="widget-title">Costo Biglietto</h4>
+                        <ul id="price-output" class="widget-value">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    
 
 
 
