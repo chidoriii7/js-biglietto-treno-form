@@ -15,53 +15,57 @@ const ageInput = document.getElementById('age');
 const buttonReadText = document.getElementById('read-text');
 const buttonReset = document.getElementById('reset-button');
 
+
+
+
 //  const pathingInputValue = document.getElementById('pathing').value;
 //  const ageInputValue = document.getElementById('age').value;
 
- 
- buttonReadText.addEventListener('click' , function(){
 
+buttonReadText.addEventListener('click' , function(){
     
+    //dati 
+    const price = 0.21
+    const discountMinorenni = 0.2
+    const discountOver65 = 0.4
+    let finalDiscount = 0
+    let finalPrice = price * pathingInput.value
 
     console.log(pathingInput.value , ageInput.value)
+
+    if(ageInput.value < 18) {
+
+    finalDiscount = price * pathingInput.value * discountMinorenni
+
+    finalPrice = finalPrice - finalDiscount
+    console.log('sconto del 20% applicato');
     
+    
+
+    } else if (ageInput.value > 65) {
+        finalDiscount = price * pathingInput.value * discountOver65
+        finalPrice = finalPrice - finalDiscount
+        console.log('sconto del 40% applicato')
+
+    } else {
+
+        console.log('nessuno sconto applicato')
+
+    }
+    
+     console.log('il totale è:', finalPrice.toFixed(2) ,'€')
+     
  }) 
 
 
- 
 
-// const prezzoBase = lunghezzaPercorso * 0.21;
-// let sconto = 0;
+ buttonReset.addEventListener('click' , function(){
 
-// if(etaPasseggero < 18) {
+    pathingInput.value = ''
+    ageInput.value = ''
 
-//     sconto = prezzoBase * 0.2;
-//     console.log('sconto del 20% applicato, il totale è:');
-
-   
-// }else if (etaPasseggero > 65) {
-     
-//     sconto = prezzoBase * 0.4;
-//     console.log('sconto del 40% applicato, il totale è:');
-
-// }else {
-
-//     console.log('nessuno sconto applicato, il totale è:');
-// 20
-// }
+    console.log('ho resettato il biglietto')
+ })
 
 
-// const buttonReadText = document.querySelector('.read-text')
-
-
-// console.dir(buttonReadText)
-
-// buttonReadText.addEventListener('click', function () {
-    
-
-// })
-
-// const prezzoTotale = prezzoBase - sconto
-
-// console.log (prezzoTotale.toFixed(2), '€')
 
